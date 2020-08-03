@@ -13,10 +13,15 @@ var vid = document.getElementById("myVideo");
 
 vid.onloadeddata = function() {
   //alert("Browser has loaded the current frame");
-  //vid.pause();
   vid.currentTime = 8;
- }
-	vid.play();
+  //vid.load();
+}
+//vid.pause();
+setTimeout(vidPlay, 1000);
+
+function vidPlay() {
+  vid.play();
+}
 
 
 
