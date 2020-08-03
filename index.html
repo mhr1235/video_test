@@ -10,11 +10,15 @@
 
 <script>
 var vid = document.getElementById("myVideo");
+var starttime = Math.floor(Math.random() * 10) + 1;
+
 
 vid.style.opacity="0";
 vid.onloadeddata = function() {
   //alert("Browser has loaded the current frame");
-  vid.currentTime = 8;
+  vid.currentTime = starttime;
+  console.log(starttime);
+
   //vid.load();
 }
 //vid.pause();
