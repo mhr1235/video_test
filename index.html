@@ -11,16 +11,20 @@
 <script>
 var vid = document.getElementById("myVideo");
 
+vid.style.opacity="0";
 vid.onloadeddata = function() {
   //alert("Browser has loaded the current frame");
   vid.currentTime = 8;
   //vid.load();
 }
 //vid.pause();
-setTimeout(vidPlay, 1000);
+vid.play();
+setTimeout(makeVisible,500);
 
-function vidPlay() {
-  vid.play();
+
+
+function makeVisible() {
+vid.style.opacity="1";
 }
 
 
